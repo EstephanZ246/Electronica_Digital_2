@@ -1,0 +1,3 @@
+build/default/production/BCD_CONVERTER_DISPLAY.p1:  \
+BCD_CONVERTER_DISPLAY.c  \
+BCD_CONVERTER_DISPLAY.h 
