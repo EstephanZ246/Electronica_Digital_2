@@ -1,3 +1,0 @@
-build/default/production/BCH_CONVERTER_DISPLAY.p1:  \
-BCH_CONVERTER_DISPLAY.c  \
-BCH_CONVERTER_DISPLAY.h 
