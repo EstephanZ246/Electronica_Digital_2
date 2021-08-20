@@ -5,7 +5,11 @@ from thread_with_trace import thread_with_trace
 from PyQt5 import QtWidgets
 import sys
 # import os
+from Adafruit_IO import Client, RequestError, Feed
 
+ADAFRUIT_IO_KEY = "aio_OCPh472nNkpjEjTlsEy4ZDOd0x8i"
+ADAFRUIT_IO_USERNAME = "EstephanZ246"
+aio = Client(ADAFRUIT_IO_USERNAME, ADAFRUIT_IO_KEY)
 
 class Serial(object):
 
@@ -24,6 +28,8 @@ class Serial(object):
             pass
 
     def read(self, p1: QtWidgets.QLabel, p2: QtWidgets.QLabel):
+        
+        
         def threadF():
             while (True):
                 if (self.serialCon.in_waiting > 0):
@@ -34,6 +40,10 @@ class Serial(object):
                         data = eval(message)
                         p1.setText(f'Pot1: {data[0]}V')
                         p2.setText(f'Pot2: {data[1]}V')
+                        #digital_feed = aio.feeds('lab5')
+                        #aio.send_data(digital_feed.key, data[0])
+                        
+                        #value = int(data[0])
                     except:
                         pass
 
