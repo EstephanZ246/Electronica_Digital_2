@@ -5,7 +5,7 @@ import time
 from Adafruit_IO import Client, RequestError, Feed
 arduino = serial.Serial(port='COM6', baudrate=9600, timeout=.1)
 
-ADAFRUIT_IO_KEY = "aio_DzXG75km3QOkUBokBFqffX5ScXCm"
+ADAFRUIT_IO_KEY = "aio_RdeX48DTK7YyHrCJ99MCkAaSwNzb"
 ADAFRUIT_IO_USERNAME = "EstephanZ246"
 aio = Client(ADAFRUIT_IO_USERNAME, ADAFRUIT_IO_KEY)
 
