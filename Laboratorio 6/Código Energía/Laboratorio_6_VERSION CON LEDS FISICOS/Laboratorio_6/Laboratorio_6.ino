@@ -146,17 +146,13 @@ void loop() {
     resultado(contador2, &mcontador2);
 
     if (banderadatos) {
-
       Serial.print("Jugador 1: ");
       Serial.print(mcontador1);
       Serial.print("   ");
       Serial.print("  Jugador 2: ");
       Serial.println(mcontador2);
-
-
       PORTA(mcontador1);
       PORTB(mcontador2);
-      
     }
 
     if (digitalRead(jugador1) == LOW) {//boton jugador1 con antirrebote
@@ -181,7 +177,6 @@ void loop() {
       }
       banboton2 = 0;
     }
-
     if (contador1 == 8 or contador2 == 8) {// verificar si alguna ya gano y luego ver quien fue
       for (unsigned char i; i < 5; i++) {
         Serial.println();
@@ -224,12 +219,7 @@ void loop() {
       contador2 = 0;
       inicio = 0;
 
-
-
     }
-
-
-
   }
 }
 
@@ -245,8 +235,9 @@ void resultado (unsigned char valor1, char *valor2) {// Rutina para el contador 
     case (7): *valor2 = B00000010; break;
     case (8): *valor2 = B00000001; break;
   }
-
 }
+
+
 void PORTA(unsigned char valor) { // mostrar valores en LEDS JUGADOR 2
 
   if (valor & B10000000) {
